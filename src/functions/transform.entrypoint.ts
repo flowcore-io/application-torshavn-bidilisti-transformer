@@ -12,6 +12,17 @@ interface Input<T = any> {
 
 export default async function (input: Input) {
   console.info(`Received event ${input.eventId}, with payload ${JSON.stringify(input.payload)} and valid time ${input.validTime}`);
+  if (input.aggregator === "borgari") {
+    if (input.eventType === "delete") {
+      return {
+        borgaraid: input.payload.borgaraid,
+      };
+    }
+    // If there is no borgaraid, then the event should be ignored
+    if (!input.payload.borgaraid) {
+      return null;
+    }
+  }
   return {
     eventid: input.eventId,
     validtime: input.validTime,
