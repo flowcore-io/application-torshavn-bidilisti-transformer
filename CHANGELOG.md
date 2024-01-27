@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2024-01-27)
+
+
+### Features
+
+* Check for delete and borgaraid ([2435181](https://github.com/flowcore-io/application-torshavn-bidilisti-transformer/commit/2435181457ae65deac61de98e6da07bfde4d8466))
+
 ## [2.0.0](https://github.com/flowcore-io/nodejs-typescript-transformer-example/compare/v1.3.1...v2.0.0) (2023-10-24)
 
 
